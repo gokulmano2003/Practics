@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div><input type="text" id="one" placeholder="enter Name"></div>
+    <div><input type="password" id="two" placeholder="enter passowrd"></div>
+    <div><input type="submit" onclick="tet1()"></div>
+    <h1 id="text"></h1>
+
+    <script>
+        function tet1() {
+            var a = document.getElementById("one").value
+            var b = document.getElementById("two").value
+            var c = a + b;
+            document.getElementById("text").innerHTML = "<p>" + c + "<p>"
+            localStorage.setItem("name",a)
+            localStorage.setItem("pass",b)
+         
+        }
+        window.onload=function(){
+           var first=localStorage.getItem("name")
+           var second=localStorage.getItem("pass")
+            if(first)document.getElementById("one").value= first
+            if(second)document.getElementById("two").value=second
+            
+
+        }
+    </script>
+
+</body>
+
+</html>

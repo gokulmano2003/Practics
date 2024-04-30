@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excuses Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .excuse-box {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .excuse {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .generate-button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .generate-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="excuse-box">
+        <h2>Excuse Generator</h2>
+        <p class="excuse" id="excuse">I'm sorry, but...</p>
+        <button class="generate-button" onclick="generateExcuse()">Generate Excuse</button>
+    </div>
+
+    <script>
+        function generateExcuse() {
+            var excuses = [
+                "I forgot about the meeting due to a sudden family emergency.",
+                "My internet connection went down, and I couldn't access my emails.",
+                "I had a doctor's appointment that I couldn't reschedule.",
+                "My computer crashed, and I lost all my work.",
+                "I got stuck in traffic for hours."
+            ];
+            var excuse = excuses[Math.floor(Math.random() * excuses.length)];
+            document.getElementById("excuse").textContent = excuse;
+        }
+    </script>
+</body>
+</html>
+
+</body>
+</html>

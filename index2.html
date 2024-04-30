@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="one" placeholder="Enter name">  
+    <input type="number" id="two" placeholder="Enter last-name"></div>
+    <div><button id="btn" >click Btn</button><div></div>
+    <div id="resultbox" style="width:100px; height: 100px; border: 1px solid black;">
+
+    </div> 
+    <script>
+    window.confirm("Hii Gokul")
+         var button =document.getElementById("btn");
+         button.addEventListener("click",add);
+         button.addEventListener("dblclick",sub)
+         button.addEventListener("mouseover",dee)
+        //  function dee(){
+        //     alert ("haii")
+        //  }
+         
+         function sub(){
+        var a=parseInt (document.getElementById("one").value)
+        var b=parseInt (document.getElementById("two").value)
+        var c=a*b;
+        document.getElementById("resultbox").innerHTML= c
+         }
+
+        function add(){
+        var a=parseInt (document.getElementById("one").value)
+        var b=parseInt (document.getElementById("two").value)
+        var c=a+b;
+        document.getElementById("resultbox").innerHTML= c
+       
+        }
+    </script>
+</body>
+</html>
