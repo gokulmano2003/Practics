@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <style>
+        #one {
+            width: 50vh;
+            height: 10vh;
+            background-color: aliceblue;
+            border: 2px solid black;
+            font-size: xx-large;
+            text-align: center;
+        }
+
+        #two {
+            width: 50vh;
+            height: 10vh;
+            background-color: aliceblue;
+            border: 2px solid black;
+            font-size: xx-large;
+            text-align: center;
+        }
+
+        #three {
+            width: 15vh;
+            height: 10vh;
+            background-color: aliceblue;
+            font-size: xx-large;
+            text-align: center;
+            border: 2px solid black;
+        }
+
+        div {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .first {
+            width: 50%;
+            height: 50vh;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="first">
+            <div id="one"></div>
+            <div><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi-plus"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                </svg></div>
+            <div id="two"></div>
+            <div><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-plus"
+                    viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path
+                        d="M48 128c-17.7 0-32 14.3-32 32s14.3 32 32 32H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H48zm0 192c-17.7 0-32 14.3-32 32s14.3 32 32 32H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H48z" />
+                </svg></div>
+            <div><input id="three" type="text"></div>
+            <div class="top"><input style="width:10vh ;  border-radius: 10px;" type="button" value="Click"
+                    onclick="clickHandler()"></div>
+            <button style="position: relative;top: 7vh;right: 15vh; border-radius: 10px;"
+                onclick="window.location.reload()">refresh</button>
+            <p id="call"></p>
+        </div>
+
+
+    </div>
+    <script>
+        // Get references to elements
+        var one = document.getElementById('one');
+        var two = document.getElementById('two');
+        var dear = document.getElementById("three");
+        var call = document.getElementById("call");
+
+
+        // Generate random numbers
+        var app = Math.floor(Math.random() * 10) + 1;
+        var ban = Math.floor(Math.random() * 10) + 1;
+
+        // Display random numbers in elements
+        one.textContent = app;
+        two.textContent = ban;
+
+        // Calculate total
+        var total = app + ban;
+
+        function clickHandler() {
+            var userInput = parseInt(dear.value); // Convert input value to integer
+
+            // if (userInput === total) {
+            //     call.textContent = "Good!";
+            //     alert("Your Win")
+            // } else {
+            //     call.textContent = "lose!";
+            //     var a=prompt("haii")
+            //     alert(a)
+
+
+            // }
+            var s=prompt()
+            alert(s)
+            var aer = (userInput === total) ? "good gokul !" : "lose gokul ?"
+            call.textContent = aer
+            
+        }
+
+
+    </script>
+    </div>
+</body>
+
+</html>

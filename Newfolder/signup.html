@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding-top: 40px;
+        }
+
+        #signin-form {
+            max-width: 300px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="signin-form">
+        <h2>Signup</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Eamil" required>
+            <div class="error1" id="user1"></div>
+            <div class="error" id="user2"></div>
+            <input type="password" id="password" placeholder="Create  Password" >
+            <div class="error1" id="pass1"></div>
+            <div class="error" id="pass2"></div>
+            <input type="password" id="currectpassword" placeholder="Confirm  Password" > 
+            <div class="error1" id="currect1"></div>
+            <div class="error" id="currect2"></div>
+            <p>Already Have An account? <a href="login.html" style="text-decoration: none;">Login</a></p>
+            <button type="submit" onclick="btn()">Sign In</button>
+        </form>
+        <h5>____________Or____________</h5>
+        <button style="margin-top: 10px;">  <img src="/html/img/google.png" style="width: 20px; height: 20px; position: relative;top: 3px;" alt=""> <a href="#" style="text-decoration: none; color: #ddd;position: relative;top: -3px;">Continue With Google</a></button>
+        <button style="margin-top: 10px;">  <img src="/html/img/fb.png" style="width: 20px; height: 20px; position: relative;top: 3px;" alt=""> <a href="#" style="text-decoration: none; color: #ddd;position: relative;top: -3px;">Continue With Google</a></button>
+    </div>
+<script>
+    function btn(){
+        var text=document.getElementById("username").value
+        var reg=/[a-zA-Z0-9][/@][a-z]{5}[/.][c,o,m]{3}/g
+        if(text.match(reg)){
+            document.getElementById("user2").innerHTML="your currect"
+            document.getElementById("user1").innerHTML=""
+        }
+        else{
+            document.getElementById("user1").innerHTML="pls use a-z & A-Z & 0-9 Number's Special  Character's"
+            document.getElementById("user2").innerHTML=""
+        }
+        var txt=document.getElementById("password").value
+        var reeg=/[a-zA-Z0-9]{6}[@,!,#,$,%,&,*]{1}/
+        if(txt.match(reeg)){
+            document.getElementById("pass2").innerHTML="your currect"
+            document.getElementById("pass1").innerHTML=""
+        }
+        else{
+            document.getElementById("pass1").innerHTML="pls use a-z , A-Z & Special charactor's"
+            document.getElementById("pass2").innerHTML=""
+        }
+        var tet=document.getElementById("currectpassword").value
+        var ger=/[a-zA-Z0-9]{6}[@,!,#,$,%,&,*]{1}/    
+        if (tet.match(ger)){
+            document.getElementById("currect2").innerHTML="your currect"
+            document.getElementById("currect1").innerHTML=""
+        }else{
+            document.getElementById("currect1").innerHTML="pls confirm PassWord"
+            document.getElementById("currect2").innerHTML=""
+        }
+    }
+</script>
+
+</body>
+
+</html>

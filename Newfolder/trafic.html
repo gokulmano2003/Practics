@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: hsla(240, 47%, 46%, 0.911);
+        }
+
+        .outline {
+            width: 150px;
+            height: 50vh;
+            background-color: #131313;
+            border: 1px solid black;
+            border-radius: 35px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+
+
+
+        }
+
+        #red {
+            width: 50px;
+            height: 50px;
+            background-color: rgb(75, 74, 74);
+            border: 10px solid black;
+            border-radius: 50px;
+
+        }
+
+        #yellow {
+            width: 50px;
+            height: 50px;
+            background-color: rgb(75, 74, 74);
+            border: 10px solid black;
+            border-radius: 50px;
+
+        }
+
+        #green {
+            width: 50px;
+            height: 50px;
+            background-color: rgb(75, 74, 74);
+            border: 10px solid black;
+            border-radius: 50px;
+        }
+
+        .cls>.button {
+            height: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+            position: relative;
+            top: -100px;
+            right: 100px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cls">
+        <div class="button">
+            <input onclick="btncolor()"
+                style="width: 60px;padding: 10px; border-radius: 10px; background-color: #131313;color: #ffffff; border-color: rgb(146, 142, 142);"
+                type="button" value="Stop">
+            <input onclick="btncolor1()"
+                style="width: 60px;padding: 10px; border-radius: 10px; background-color: #131313;color: #ffffff; border-color: rgb(138, 134, 134); "
+                type="button" value="Ready">
+            <input onclick="btncolor2()"
+                style="width: 60px;padding: 10px; border-radius: 10px; background-color: #131313;color: #ffffff; border-color: rgb(143, 140, 140);"
+                type="button" value="Go">
+                <button onclick="window.location.reload()" style="width: 60px;padding: 10px; border-radius: 10px; background-color: #131313;color: #ffffff; border-color: rgb(146, 142, 142);" >Reload</button>
+        </div>
+        <div class="outline">
+            <div id="red"></div>
+            <div id="yellow"></div>
+            <div id="green"></div>
+        </div>
+        <h1 style="position: relative;top: 200px; right: 150px;">Traffic light</h1>
+    </div>
+
+    <script>
+        var red = document.getElementById("red")
+        var yellow = document.getElementById("yellow")
+        var green = document.getElementById("green")
+        function btncolor() {
+            red.style.backgroundColor = "red"
+            yellow.style.backgroundColor="rgb(75,74,74)"
+           
+        }
+        function btncolor1() {
+            red.style.backgroundColor="rgb(75, 74, 74)"
+            yellow.style.backgroundColor = "yellow"
+            green.style.backgroundColor="rgb(75,74,74)"
+        }
+        function btncolor2() {
+            red.style.backgroundColor="rgb(75, 74, 74)"
+            yellow.style.backgroundColor = "rgb(75, 74, 74)"
+            green.style.backgroundColor = "green"
+        }
+
+    </script>
+</body>
+
+</html>

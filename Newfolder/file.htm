@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <div>
+            <input type="number" oninput="gokul()" id="form">
+            <p id="call"></p>
+        </div>
+        <div>
+            <input type="number" onkeydown="gok()" id="forms">
+            <p id="calls"></p>
+        </div>
+        <script>
+            const gokul=()=>{
+                var a=parseInt (document.getElementById("form").value)
+                document.getElementById("call").innerHTML=a
+                sessionStorage.setItem("num",a)     
+            }
+            function gok(){
+                var y=parseInt (document.getElementById("forms").value)
+                document.getElementById("calls").innerHTML=y
+                
+            }
+         
+
+        </script>
+</body>
+</html>
