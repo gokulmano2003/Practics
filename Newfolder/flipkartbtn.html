@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .outline {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .out{
+            display: flex;
+           gap: 10px;
+        }
+        input{
+            text-align: center;
+            width: 8vh;
+            height: 5vh;
+            font-size: large;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outline">
+        <div class="out">
+            <div onclick="increment()" style="cursor: pointer;">+</div>
+            <input type="text" id="putline" value="0">
+            <div onclick="decrement()" style="cursor: pointer;">-</div>
+        </div>
+    </div>
+    <script>
+        function increment() {
+            var line = parseInt(document.getElementById("putline").value)
+            if (line < 10) {
+                document.getElementById('putline').value = line + 1
+            }
+        }
+        function decrement() {
+            var line = parseInt(document.getElementById("putline").value)
+            if (line > 0) {
+                document.getElementById('putline').value = line - 1
+            }
+        }
+    </script>
+</body>
+
+</html>
